@@ -3,10 +3,11 @@
 #include <iostream>
 
 //local
-#include "SFML\System.hpp"
+#include "core\Engine.h"
 
 int main() 
 {
-
+	ncmc::PrototypeEngine engine;
+	engine.run();
 	return EXIT_SUCCESS;
 }
