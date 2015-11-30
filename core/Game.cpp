@@ -2,11 +2,11 @@
 #include <iostream>
 
 //local
-#include "Engine.h"
+#include "Game.h"
 
-const sf::VideoMode ncmc::PrototypeEngine::DefaultVM(800, 600, 32);
+const sf::VideoMode ncmc::Game::DefaultVM(800, 600, 32);
 
-ncmc::PrototypeEngine::PrototypeEngine() : 
+ncmc::Game::Game() : 
 		width(DefaultVM.width), 
 		height(DefaultVM.height),
 		bpp(DefaultVM.bitsPerPixel),
@@ -14,11 +14,11 @@ ncmc::PrototypeEngine::PrototypeEngine() :
 {
 }
 
-ncmc::PrototypeEngine::~PrototypeEngine()
+ncmc::Game::~Game()
 {
 }
 
-void ncmc::PrototypeEngine::run()
+void ncmc::Game::run()
 {
 	// Choix du mode vidéo
 	sf::VideoMode vm(this->width, this->height, this->bpp);
@@ -38,7 +38,7 @@ void ncmc::PrototypeEngine::run()
 	}
 }
 
-void ncmc::PrototypeEngine::printAvailableResolutions() const
+void ncmc::Game::printAvailableResolutions() const
 {
 	// Display the list of all the video modes available for fullscreen
 	std::vector<sf::VideoMode> modes = sf::VideoMode::getFullscreenModes();

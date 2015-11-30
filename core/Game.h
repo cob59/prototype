@@ -8,13 +8,13 @@
 
 namespace ncmc
 {
-	class PrototypeEngine
+	class Game
 	{
 	public:
-		PrototypeEngine();
-		PrototypeEngine(const PrototypeEngine&) = delete;
-		PrototypeEngine& operator=(const PrototypeEngine&) = delete;
-		~PrototypeEngine();
+		Game();
+		Game(const Game&) = delete;
+		Game& operator=(const Game&) = delete;
+		~Game();
 
 		void run();
 
