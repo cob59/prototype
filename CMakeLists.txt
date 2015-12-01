@@ -9,12 +9,14 @@ macro(ScanForSources)
 	cmake_parse_arguments(SRC "${options}" "${oneValueArgs}" "${multipleValueArgs}" ${ARGN})
 	
 	foreach(dir IN LISTS SRC_DIRS)
+		get_filename_component(dirname ${dir} NAME)
 		file(GLOB_RECURSE files
 			${dir}/*.hpp
 			${dir}/*.cpp
 			${dir}/*.h
 			${dir}/*.c
 		)
+		source_group(${dirname} FILES ${files})
 		list(APPEND ${SRC_DESTINATION} ${files})
 	endforeach()
 endmacro(ScanForSources)
