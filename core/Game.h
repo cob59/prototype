@@ -23,7 +23,7 @@ namespace ncmc
 
 	private:
 		static const sf::VideoMode DefaultVM;
-		std::size_t width, height, bpp;
+		unsigned int width, height, bpp;
 		std::string windowTitle;
 	};
 }

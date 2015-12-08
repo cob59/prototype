@@ -29,12 +29,19 @@ void ncmc::Game::run()
 
 	while (window.isOpen())
 	{
+		// Fait l'interface entre les infos fournies par SFML et celles requises par notre jeu
+		ncmc::EventParser parser;
+
+		// 1) Lecture de tous les events SFML
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
-			if (event.type == sf::Event::Closed)
-				window.close();
+			parser.read(event);
+			
+			if (event.type == sf::Event::Closed) window.close();
 		}
+
+		// 2) 
 	}
 }
 

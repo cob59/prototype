@@ -3,11 +3,11 @@
 #include <iostream>
 
 //local
-#include "core\Engine.h"
+#include "core\Game.h"
 
 int main() 
 {
-	ncmc::PrototypeEngine engine;
-	engine.run();
+	ncmc::Game game;
+	game.run();
 	return EXIT_SUCCESS;
 }
